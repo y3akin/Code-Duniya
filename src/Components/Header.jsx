@@ -5,8 +5,17 @@ import Image from "./Layouts/Image";
 import Logo from "../assets/Image/logo.png";
 import Listitems from "./Layouts/Listitems";
 import Button from "./Layouts/Button";
+import Banner from "./Banner";
 
-const Navbar = () => {
+const Header = () => {
+
+  let handleScrollToCourse = ()=>{
+     let courseSection = document.getElementById("course")
+     if(courseSection){
+      courseSection.scrollIntoView({behavior: "smooth"})
+     }
+   }
+
    return (
       <header className="bg-primary py-[15px]">
          <nav>
@@ -15,16 +24,17 @@ const Navbar = () => {
                   <Image src={Logo} alt={"Logo_image"} />
                   <ul className="flex gap-[25px]">
                      <Listitems list={"হোম"} />
-                     <Listitems list={"আমাদের কোর্সসমহ"} />
+                     <Listitems onClick={handleScrollToCourse} list={"আমাদের কোর্সসমহ"} />
                      <Listitems list={"যোগাযোগ"} />
                      <Listitems list={"ক্যারিয়ার গাইডলাইন"} />
                   </ul>
-                  <Button btn={"কোর্স দেখুন"} className={"bg-[#415A77]"} />
+                  <Button onClick={handleScrollToCourse}  btn={"কোর্স দেখুন"} className={"bg-[#415A77]"} />
                </Flex>
             </Container>
          </nav>
+        <Banner/> 
       </header>
    );
 };
 
-export default Navbar;
+export default Header;

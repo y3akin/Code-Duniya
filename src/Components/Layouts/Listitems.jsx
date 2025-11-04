@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Listitems = ({list, className}) => {
+const Listitems = ({list, className, onClick}) => {
   return (
-<li className={`font-Anek font-semibold text-[24px] text-white cursor-pointer ${className}`}>{list}</li>
+<li onClick={onClick} className={`font-Anek font-semibold text-[24px] text-white cursor-pointer hover:text-[#778DA9] ${className}`}>{list}</li>
   )
 }
 

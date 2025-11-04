@@ -7,7 +7,8 @@ import Softicon from "../assets/Image/softicon.png";
 import Filmicon from "../assets/Image/filmicon.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { MdArrowLeft, MdArrowRight  } from "react-icons/md";
+
 
 const Category = () => {
    const items = [
@@ -21,29 +22,29 @@ const Category = () => {
       { name: "ফিল্ম মিডিয়া", icon: Filmicon },
    ];
 
-   function NextArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-         <div
-            className={`${className}`}
-            style={{ ...style, display: "block", background: "#415A77", width:"50px", height: "50px", position:"absolute", right:"-50px" }}
-            onClick={onClick}
-         />
-      );
-   }
+  const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <MdArrowRight
+     className={`${className} flex items-center justify-center text-[76px] text-white bg-[#415A77] rounded-full w-[76px] h-[76px] cursor-pointer absolute right-[-78px] top-1/2 transform -translate-y-1/2 z-10`}
+      style={{ ...style, display: "block"}}
+      onClick={onClick}
+    />
+  );
+};
 
-   function PrevArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-         <div
-            className={className}
-            style={{ ...style, display: "block", background: "#415A77", width:"50px", height: "50px", position:"absolute", left:"-50px"  }}
-            onClick={onClick}
-         />
-      );
-   }
+  const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <MdArrowLeft 
+     className={`${className} flex items-center justify-center text-[76px] text-white bg-[#415A77] rounded-full w-[76px] h-[76px] cursor-pointer absolute left-[-78px] top-1/2 transform -translate-y-1/2 z-10`}
+      style={{ ...style, display: "block"}}
+      onClick={onClick}
+    />
+  );
+};
 
-   var settings = {
+   const settings = {
       dots: false,
       infinite: true,
       speed: 500,
@@ -56,7 +57,7 @@ const Category = () => {
    };
 
    return (
-      <section className=" absolute top-[710px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <section className="absolute top-[-100px] w-full">
          <Container>
             <div className="mx-14">
               <Slider {...settings}>

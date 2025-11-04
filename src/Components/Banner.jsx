@@ -6,6 +6,13 @@ import Image from "./Layouts/Image";
 import Banner_img from "../assets/Image/banner.png";
 
 const Banner = () => {
+   let handleScrollToCourse = () => {
+      let courseSection = document.getElementById("course");
+      if (courseSection) {
+         courseSection.scrollIntoView({ behavior: "smooth" });
+      }
+   };
+
    return (
       <section className="bg-primary pt-[81.62px] pb-[173.83px]">
          <Container>
@@ -20,7 +27,11 @@ const Banner = () => {
                      এক্সপার্ট হিসেবে গড়ে তুলুন
                   </p>
 
-                  <Button btn={"কোর্স দেখুন"} className={"bg-[#415A77]"} />
+                  <Button
+                     onClick={handleScrollToCourse}
+                     btn={"কোর্স দেখুন"}
+                     className={"bg-[#415A77]"}
+                  />
                </div>
 
                <Image src={Banner_img} alt={"Banner_Image"} />
