@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
       <div className="relative">
          <Category />
       </div>
-      <Course />
-      <Shera />
+      {/* <Course />
+      <Shera /> */}
    </StrictMode>
 );
