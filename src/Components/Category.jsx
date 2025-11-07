@@ -54,12 +54,23 @@ const Category = () => {
       autoplaySpeed: 1000,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
+      responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplaySpeed: 2500,
+        }
+      }
+    ]
    };
 
    return (
       <section className="absolute top-[-100px] w-full">
          <Container>
-            <div className="mx-14">
+            <div className="mx-auto sm:mx-14">
               <Slider {...settings}>
                {items.map((cItems) => (
                   <Category_items items={cItems} />
