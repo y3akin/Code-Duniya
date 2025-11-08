@@ -26,7 +26,7 @@ const Shera = () => {
          title: "স্টুডেন্ট এর পছন্দ",
          prg: "এখানে কিছু টেক্সট  বাসবে এখানে কিছু টেক্সট বাসবে এখানে কিছু টেক্সট বাসবে এখানে কিছু টেক্সট বাসবে এখানে কিছু টেক্সট বাসবে এখানে কিছু টেক্সট বাসবেএখানে কিছু টেক্সট বাসবে",
       },
-      
+
       {
          num: "৯০ % ",
          title: "সফলতার হার",
@@ -76,6 +76,16 @@ const Shera = () => {
       slidesToScroll: 1,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
+      responsive: [
+         {
+            breakpoint: 640,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               arrows: false,
+            },
+         },
+      ],
    };
 
    return (

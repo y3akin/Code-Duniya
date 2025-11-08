@@ -72,7 +72,7 @@ const Course = () => {
    return (
       <section id="course">
          <Container>
-         <div className="mt-[170px] text-center">
+         <div className="mt-[130px] sm:mt-[170px] text-center">
             <Title title_text={"আমাদের কোর্স সমুহ"} />
             <Descrip
                title_p={
@@ -81,7 +81,7 @@ const Course = () => {
             />
          </div>
 
-         <div className="grid grid-cols-3 gap-3 pt-[62px]">
+         <div className="flex flex-wrap justify-evenly items-center mt-[22px] sm:grid sm:grid-cols-3 sm:mt-[62px]">
             {showCourse.map((Citems) => (
                <Course_card courseitem={Citems} />
             ))}

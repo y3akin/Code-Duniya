@@ -56,7 +56,7 @@ const Category = () => {
       prevArrow: <PrevArrow />,
       responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

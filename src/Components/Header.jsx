@@ -22,7 +22,7 @@ const Header = () => {
    };
 
    return (
-      <header className="bg-primary py-[15px] sticky top-0">
+      <header className="bg-primary py-[15px]">
          <nav>
             <Container>
                <Flex className={"items-center justify-between"}>
