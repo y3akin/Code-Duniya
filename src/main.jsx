@@ -1,20 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Header from "./Components/Header";
-import Banner from "./Components/Banner"
-import Category from "./Components/Category";
-import Course from "./Components/Course";
-import Shera from "./Components/Shera";
+import SignUp from "./Components/Pages.jsx/SignUp";
+import CodeDuniya from "./Components/Pages.jsx/CodeDuniya";
+
+const router = createBrowserRouter([
+  { path: "/", element: <SignUp /> },
+  { path: "/CodeDuniya", element: <CodeDuniya /> },
+]);
 
 createRoot(document.getElementById("root")).render(
-   <StrictMode>
-      <Header />
-      <Banner/>
-      <div className="relative">
-         <Category />
-      </div>
-      <Course />
-      <Shera />
-   </StrictMode>
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );
