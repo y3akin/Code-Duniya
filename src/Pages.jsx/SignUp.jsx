@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/Image/logo.png";
+import Logo from "../assets/Image/logo.png";
 
 
 const SignUp = () => {

@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import SignUp from "./Components/Pages.jsx/SignUp";
-import CodeDuniya from "./Components/Pages.jsx/CodeDuniya";
+import SignUp from "./Pages.jsx/SignUp";
+import CodeDuniya from "./Pages.jsx/CodeDuniya";
 
 const router = createBrowserRouter([
   { path: "/", element: <SignUp /> },

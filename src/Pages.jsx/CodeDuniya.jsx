@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../Header";
-import Banner from "../Banner"
-import Category from "../Category";
-import Course from "../Course";
-import Shera from "../Shera";
+import Header from "../Components/Header";
+import Banner from "../Components/Banner"
+import Category from "../Components/Category";
+import Course from "../Components/Course";
+import Shera from "../Components/Shera";
 
 const CodeDuniya = () => {
    return (
